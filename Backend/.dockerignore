@@ -1,0 +1,20 @@
+# Ignore local dependencies
+node_modules
+bun_modules
+
+# Ignore environment files
+.env
+.env.*
+
+# Ignore build artifacts / logs
+dist
+build
+*.log
+
+# Ignore git files
+.git
+.gitignore
+
+# Ignore Docker files from host
+Dockerfile
+.dockerignore
