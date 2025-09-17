@@ -44,13 +44,13 @@ const signup = asyncHandler(async (req, res) => {
     .cookie("accesstoken", accessToken, {
       httpOnly: true,
       secure: true,
-      sameSite: "strict",
+      sameSite: 'None',
       maxAge: 7 * 24 * 60 * 60 * 1000,
     })
     .cookie("refreshtoken", refreshToken, {
       httpOnly: true,
       secure: true,
-      sameSite: "strict",
+      sameSite: 'None',
       maxAge: 30 * 24 * 60 * 60 * 1000,
     });
 
@@ -81,13 +81,13 @@ const login = asyncHandler(async (req, res) => {
     .cookie("accesstoken", accessToken, {
       httpOnly: true,
       secure: true,
-      sameSite: "strict",
+      sameSite: 'None',
       maxAge: 7 * 24 * 60 * 60 * 1000,
     })
     .cookie("refreshtoken", refreshToken, {
       httpOnly: true,
       secure: true,
-      sameSite: "strict",
+      sameSite: 'None',
       maxAge: 30 * 24 * 60 * 60 * 1000,
     });
 
@@ -112,12 +112,12 @@ const logout = asyncHandler(async (req, res) => {
     .clearCookie("accesstoken", {
       httpOnly: true,
       secure: true,
-      sameSite: "strict",
+      sameSite: 'None',
     })
     .clearCookie("refreshtoken", {
       httpOnly: true,
       secure: true,
-      sameSite: "strict",
+      sameSite: 'None',
     })
     .status(200)
     .json(new ApiResponse(200, "Logout Successfully "));
@@ -134,12 +134,12 @@ const removeAccount = asyncHandler(async (req, res) => {
     .clearCookie("accesstoken", {
       httpOnly: true,
       secure: true,
-      sameSite: "strict",
+      sameSite: "None",
     })
     .clearCookie("refreshtoken", {
       httpOnly: true,
       secure: true,
-      sameSite: "strict",
+      sameSite: 'None',
     })
     .status(200)
     .json(new ApiResponse(200, "Account Remove Successfully "));

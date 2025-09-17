@@ -1,9 +1,9 @@
 import mongoose from "mongoose";
 import { DB_NAME } from "../constraints.js";
 
-
 const connection = async () => {
   try {
+    console.log(`${process.env.MONGODB_URL}/${DB_NAME}`);
     const connectionInstance = await mongoose.connect(
       `${process.env.MONGODB_URL}/${DB_NAME}`
     );
